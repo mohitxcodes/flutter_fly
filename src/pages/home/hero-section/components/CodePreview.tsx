@@ -4,23 +4,23 @@ import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function CodePreview() {
   const flutterCode = `
-// A beautiful Flutter widget
-Container(
-  decoration: BoxDecoration(
-    gradient: LinearGradient(
-      colors: [Colors.blue, Colors.purple],
-    ),
-  ),
-  child: Center(
-    child: Text(
-      'Welcome to FlutterFly!',
-      style: TextStyle(
-        fontSize: 24,
-        color: Colors.white,
-      ),
-    ),
-  ),
-)`;
+      // A beautiful Flutter widget
+      Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.blue, Colors.purple],
+          ),
+        ),
+        child: Center(
+          child: Text(
+            'Welcome to FlutterFly!',
+            style: TextStyle(
+              fontSize: 24,
+              color: Colors.white,
+            ),
+          ),
+        ),
+      )`;
 
   return (
     <motion.div

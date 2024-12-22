@@ -1,4 +1,5 @@
 import BackgroundEffect from "@/common/components/BackgroundEffect";
+import ContentWrapper from "@/common/components/ContentWrapper";
 import { motion } from "framer-motion";
 
 export default function TemplateSection() {
@@ -32,9 +33,9 @@ export default function TemplateSection() {
 
   return (
     <section className="py-20 bg-[#0B1120] relative">
-      <BackgroundEffect />
+      {/* <BackgroundEffect /> */}
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ContentWrapper>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +118,7 @@ export default function TemplateSection() {
             </motion.div>
           ))}
         </div>
-      </div>
+      </ContentWrapper>
     </section>
   );
 }

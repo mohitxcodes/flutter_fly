@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import ContentWrapper from "../components/ContentWrapper";
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-full mx-auto px-12 sm:px-6 lg:px-8 relative">
+      <ContentWrapper>
         <div className="py-12 border-t border-slate-700/50">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <motion.div
@@ -122,7 +123,7 @@ export default function Footer() {
             </p>
           </div>
         </div>
-      </div>
+      </ContentWrapper>
     </footer>
   );
 }

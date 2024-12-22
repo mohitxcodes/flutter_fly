@@ -8,8 +8,9 @@ export default function HomePage() {
     <div>
       <HeroSection />
       <FeaturesSection />
-      <TemplateSection />
       <ScreenSection />
+      <TemplateSection />
+      {/* <ExploreSection /> */}
     </div>
   );
 }

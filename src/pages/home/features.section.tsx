@@ -1,4 +1,6 @@
+import ContentWrapper from "@/common/components/ContentWrapper";
 import { motion } from "framer-motion";
+import HeroBackground from "./hero-section/components/HeroBackground";
 
 export default function FeaturesSection() {
   const features = [
@@ -43,15 +45,16 @@ export default function FeaturesSection() {
   return (
     <section className="py-20 bg-[#0B1120] relative">
       {/* Background effects */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-full h-full">
           <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px] animate-pulse" />
           <div className="absolute bottom-1/4 left-1/4 w-[300px] h-[300px] bg-purple-600/10 rounded-full blur-[100px] animate-pulse" />
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_90%_60%_at_50%_0%,black,transparent)]" />
         </div>
-      </div>
+      </div> */}
+      <HeroBackground />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ContentWrapper>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +79,7 @@ export default function FeaturesSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative group p-6 bg-slate-900/50 backdrop-blur border border-slate-700/50 rounded-2xl hover:bg-slate-800/50 transition-colors"
+              className="relative group p-6 bg-slate-900/50 backdrop-blur cursor-pointer  border border-slate-700/50 rounded-2xl hover:bg-slate-800/50 transition-colors"
             >
               <div className="text-4xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-bold text-white mb-2">
@@ -87,7 +90,7 @@ export default function FeaturesSection() {
             </motion.div>
           ))}
         </div>
-      </div>
+      </ContentWrapper>
     </section>
   );
 }

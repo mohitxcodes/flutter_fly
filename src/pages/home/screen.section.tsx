@@ -3,6 +3,8 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { useState } from "react";
 import BackgroundEffect from "@/common/components/BackgroundEffect";
+import ContentWrapper from "@/common/components/ContentWrapper";
+import HeroBackground from "./hero-section/components/HeroBackground";
 
 export default function ScreenSection() {
   const [showCode, setShowCode] = useState(false);
@@ -132,9 +134,10 @@ class ChatScreen extends StatelessWidget {
   return (
     <section className="py-20 bg-[#0B1120] relative">
       {/* Background effects */}
-      <BackgroundEffect />
+      {/* <BackgroundEffect /> */}
+      <HeroBackground />
 
-      <div className="relative max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8">
+      <ContentWrapper>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -162,7 +165,7 @@ class ChatScreen extends StatelessWidget {
               className="relative group"
             >
               {/* Mobile frame */}
-              <div className="w-[300px] h-[580px] bg-slate-900 rounded-[3rem] p-2 border-[14px] border-slate-800 shadow-2xl shadow-blue-500/10 relative">
+              <div className="w-[320px] h-[580px] bg-slate-900 rounded-[3rem] p-3 border-[14px] border-slate-800 shadow-2xl shadow-blue-500/10 relative">
                 <div className="relative h-full w-full rounded-[2rem] overflow-hidden">
                   <img
                     src={screen.image}
@@ -272,7 +275,7 @@ class ChatScreen extends StatelessWidget {
             )}
           </AnimatePresence>
         </div>
-      </div>
+      </ContentWrapper>
     </section>
   );
 }

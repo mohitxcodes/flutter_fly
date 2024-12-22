@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function HeroButtons() {
   return (
@@ -8,8 +9,8 @@ export default function HeroButtons() {
       transition={{ duration: 0.8, delay: 0.4 }}
       className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4"
     >
-      <a
-        href="#"
+      <Link
+        to="/explore"
         className="group flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium rounded-xl text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transform hover:scale-105 transition-all duration-200 shadow-lg shadow-blue-500/25"
       >
         <span>Get Started</span>
@@ -24,7 +25,7 @@ export default function HeroButtons() {
             clipRule="evenodd"
           />
         </svg>
-      </a>
+      </Link>
       <a
         href="#"
         className="group flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium rounded-xl text-white bg-slate-800/50 hover:bg-slate-700/50 backdrop-blur-sm border border-slate-700 transform hover:scale-105 transition-all duration-200"

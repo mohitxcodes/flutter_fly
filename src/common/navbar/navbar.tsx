@@ -1,18 +1,18 @@
+import React from "react";
+import ContentWrapper from "../components/ContentWrapper";
+import BackgroundEffect from "../components/BackgroundEffect";
+import { Navigate, useNavigate } from "react-router-dom";
+
 export default function Navbar() {
+  const navigate = useNavigate();
+  const [isDark, setIsDark] = React.useState(true);
+
   return (
-    <nav className="relative bg-[#0B1120]  border-white/10">
+    <nav className="relative bg-[#0B1120] border-white/10">
       {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-full h-full">
-          <div className="absolute -top-2 left-1/4 w-[200px] h-[100px] bg-blue-600/5 rounded-full blur-[80px] animate-pulse" />
-          <div className="absolute -top-2 right-1/4 w-[150px] h-[100px] bg-purple-600/5 rounded-full blur-[80px] animate-pulse" />
+      <BackgroundEffect />
 
-          {/* Code matrix background */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,black,transparent)]" />
-        </div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4">
+      <ContentWrapper>
         <div className="flex flex-col md:flex-row md:justify-between md:items-center py-3 md:py-4">
           {/* Logo and Name */}
           <div className="flex items-center justify-center md:justify-start">
@@ -26,15 +26,50 @@ export default function Navbar() {
                 <path d="M15.5 8a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm-8 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm4 8a5 5 0 01-4.5-2.8h9a5 5 0 01-4.5 2.8z" />
               </svg>
             </div>
-            <div className="ml-3">
+            <div className="ml-3 cursor-pointer" onClick={() => navigate("/")}>
               <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
                 FlutterFly
               </span>
             </div>
           </div>
 
-          {/* Social Links */}
-          <div className="flex items-center justify-center md:justify-end space-x-4 mt-4 md:mt-0">
+          {/* Social Links and Theme Toggle */}
+          <div className="flex items-center justify-center md:justify-end space-x-4 mt-4 md:mt-0 order-2 md:order-3">
+            <button
+              onClick={() => setIsDark(!isDark)}
+              className="p-2 text-gray-400 hover:text-blue-400 transition-colors backdrop-blur-sm bg-slate-800/50 rounded-lg border border-slate-700/50"
+              aria-label="Toggle theme"
+            >
+              {isDark ? (
+                <svg
+                  className="h-5 w-5 sm:h-6 sm:w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className="h-5 w-5 sm:h-6 sm:w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                  />
+                </svg>
+              )}
+            </button>
             <a
               href="https://twitter.com"
               className="text-gray-400 hover:text-blue-400 transition-colors backdrop-blur-sm"
@@ -76,7 +111,7 @@ export default function Navbar() {
             </a>
           </div>
         </div>
-      </div>
+      </ContentWrapper>
     </nav>
   );
 }
