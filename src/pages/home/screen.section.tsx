@@ -2,7 +2,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { useState } from "react";
-import BackgroundEffect from "@/common/components/BackgroundEffect";
 import ContentWrapper from "@/common/components/ContentWrapper";
 import HeroBackground from "./hero-section/components/HeroBackground";
 
@@ -14,8 +13,7 @@ export default function ScreenSection() {
     {
       id: 1,
       title: "Social Feed",
-      image:
-        "https://cdn.dribbble.com/users/1615584/screenshots/15571949/media/7e95f0fddb7957220033569815149bca.jpg",
+      image: "/screens/social-feed.png",
       code: `
 // Social Feed Screen
 class SocialFeedScreen extends StatelessWidget {
@@ -39,8 +37,7 @@ class SocialFeedScreen extends StatelessWidget {
     {
       id: 2,
       title: "E-Commerce",
-      image:
-        "https://cdn.dribbble.com/users/4189231/screenshots/17343305/media/202173138f9504c2eacd16e70698312c.png",
+      image: "/screens/ecommerce.png",
       code: `
 // E-Commerce Screen  
 class ProductScreen extends StatelessWidget {
@@ -67,8 +64,7 @@ class ProductScreen extends StatelessWidget {
     {
       id: 3,
       title: "Profile",
-      image:
-        "https://cdn.dribbble.com/users/2564256/screenshots/15797905/media/26764c3ff3ea4b393b657edab64d8553.png",
+      image: "/screens/profile.png",
       code: `
 // Profile Screen
 class ProfileScreen extends StatelessWidget {
@@ -97,8 +93,7 @@ class ProfileScreen extends StatelessWidget {
     {
       id: 4,
       title: "Chat App",
-      image:
-        "https://cdn.dribbble.com/users/1615584/screenshots/15571949/media/7e95f0fddb7957220033569815149bca.jpg",
+      image: "/screens/chat-app.png",
       code: `
 // Chat Screen
 class ChatScreen extends StatelessWidget {

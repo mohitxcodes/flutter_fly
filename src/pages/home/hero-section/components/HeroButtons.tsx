@@ -10,7 +10,7 @@ export default function HeroButtons() {
       className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4"
     >
       <Link
-        to="/explore"
+        to="#"
         className="group flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium rounded-xl text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transform hover:scale-105 transition-all duration-200 shadow-lg shadow-blue-500/25"
       >
         <span>Get Started</span>
