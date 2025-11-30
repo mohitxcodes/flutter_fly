@@ -1,4 +1,3 @@
-import BackgroundEffect from "@/common/components/BackgroundEffect";
 import ContentWrapper from "@/common/components/ContentWrapper";
 import { motion } from "framer-motion";
 
@@ -9,7 +8,7 @@ export default function TemplateSection() {
       title: "E-Commerce App",
       description:
         "A modern e-commerce template with cart functionality and payment integration",
-      image: "/ecommerce-template.png",
+      image: "/templates/ecommerce-template.png",
       category: "Mobile App",
       downloads: 1234,
     },
@@ -17,7 +16,7 @@ export default function TemplateSection() {
       id: 2,
       title: "Social Media Dashboard",
       description: "Complete social media management dashboard with analytics",
-      image: "/social-dashboard.png",
+      image: "/templates/social-dashboard.png",
       category: "Web App",
       downloads: 856,
     },
@@ -25,7 +24,7 @@ export default function TemplateSection() {
       id: 3,
       title: "Portfolio Website",
       description: "Clean and minimal portfolio template for creatives",
-      image: "/portfolio-template.png",
+      image: "/templates/portfolio-template.png",
       category: "Website",
       downloads: 2341,
     },

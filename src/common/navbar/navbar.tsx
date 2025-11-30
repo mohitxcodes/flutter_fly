@@ -1,7 +1,7 @@
 import React from "react";
 import ContentWrapper from "../components/ContentWrapper";
 import BackgroundEffect from "../components/BackgroundEffect";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const navigate = useNavigate();
